@@ -5,5 +5,6 @@
 		//ideally, redirect or 404 error
 	}
 
-	
+	//following code only runs if __CONFIG__ is defined ie. from an intended page like index.php
+
 ?>
