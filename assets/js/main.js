@@ -43,6 +43,29 @@ $(document)
 		// At this point the input is good, start AJAX process
 		clearErrors();
 
+		$.ajax({
+			type: 'POST',
+			url: 'ajax/register.php',
+			data: data,
+			dataType: 'json',
+			async: true,
+		})
+		.done(function ajaxDone(data){
+			// Whatever data is
+			console.log(data);
+			if(data.redirect !== undefined) {
+				window.location = data.redirect;
+			}
+		})
+		.fail(function ajaxFailed(e){
+			// This failed
+			console.log(e);
+		})
+		.always(function ajaxAlways(data){
+			// Always do
+			console.log('Always');
+		})
+
 
 		console.log(data);
 
