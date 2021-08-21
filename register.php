@@ -10,9 +10,9 @@
         <title>Register</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/uikit.min.css" />
-        <script src="js/uikit.min.js"></script>
-        <script src="js/uikit-icons.min.js"></script>
+        <link rel="stylesheet" href="assets/css/uikit.min.css" />
+        <script src="assets/js/uikit.min.js"></script>
+        <script src="assets/js/uikit-icons.min.js"></script>
     </head>
     <body>
 
@@ -21,22 +21,24 @@
                 <form class="uk-form-stacked js-register" autocomplete="off">
                     <h2>Register</h2>
                     <div class="uk-margin">
-                        <label class="uk-form-label" for="form-stacked-text">Email</label>
+                        <label class="uk-form-label" for="email-input">Email</label>
                         <div class="uk-form-controls">
-                            <input class="uk-input" id="form-stacked-text" type="email" required="required" placeholder="email@email.com">
+                            <input class="uk-input" id="email-input" type="email" required="required" placeholder="email@email.com">
                         </div>
                     </div>
                     <div class="uk-margin">
-                        <label class="uk-form-label" for="form-stacked-text">Password</label>
+                        <label class="uk-form-label" for="password-input">Password</label>
                         <div class="uk-form-controls">
-                            <input class="uk-input" id="form-stacked-text" type="password" required="required" placeholder="password">
+                            <input class="uk-input" id="password-input" type="password" required="required" placeholder="password">
                         </div>
                     </div>
                     <div class="uk-margin">
-                        <label class="uk-form-label" for="form-stacked-text">Re-type Password</label>
+                        <label class="uk-form-label" for="password-repeat-input">Re-type Password</label>
                         <div class="uk-form-controls">
-                            <input class="uk-input" id="form-stacked-text" type="password" required="required" placeholder="password">
+                            <input class="uk-input" id="password-repeat-input" type="password" required="required" placeholder="password">
                         </div>
+                    </div>
+                    <div class="uk-margin uk-alert uk-alert-danger js-error" style="display:none;">
                     </div>
                     <div class="uk-margin">
                         <button class="uk-button uk-button-default" type="submit">Register</button>
