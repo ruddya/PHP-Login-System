@@ -7,4 +7,10 @@
 
 	//following code only runs if __CONFIG__ is defined ie. from an intended page like index.php
 
+
+	// Include DB.php class
+	include_once "classes/DB.php";
+
+	$db = DB::getConnection();
+
 ?>
