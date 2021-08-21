@@ -21,15 +21,15 @@
     			<form class="uk-form-stacked js-login" autocomplete="off">
     				<h2>Login</h2>
 				    <div class="uk-margin">
-				        <label class="uk-form-label" for="form-stacked-text">Email</label>
+				        <label class="uk-form-label" for="email-input">Email</label>
 				        <div class="uk-form-controls">
-				            <input class="uk-input" id="form-stacked-text" type="email" required="required" placeholder="email@email.com">
+				            <input class="uk-input" id="email-input" type="email" required="required" placeholder="email@email.com" autocomplete="email">
 				        </div>
 				    </div>
 				    <div class="uk-margin">
-				        <label class="uk-form-label" for="form-stacked-text">Password</label>
+				        <label class="uk-form-label" for="password-input">Password</label>
 				        <div class="uk-form-controls">
-				            <input class="uk-input" id="form-stacked-text" type="password" required="required" placeholder="password">
+				            <input class="uk-input" id="password-input" type="password" required="required" placeholder="password" autocomplete="current-password">
 				        </div>
 				    </div>
 				    <div class="uk-margin">

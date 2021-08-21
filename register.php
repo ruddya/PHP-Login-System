@@ -23,19 +23,19 @@
                     <div class="uk-margin">
                         <label class="uk-form-label" for="email-input">Email</label>
                         <div class="uk-form-controls">
-                            <input class="uk-input" id="email-input" type="email" required="required" placeholder="email@email.com">
+                            <input class="uk-input" id="email-input" type="email" required="required" placeholder="email@email.com" autocomplete="email">
                         </div>
                     </div>
                     <div class="uk-margin">
                         <label class="uk-form-label" for="password-input">Password</label>
                         <div class="uk-form-controls">
-                            <input class="uk-input" id="password-input" type="password" required="required" placeholder="password">
+                            <input class="uk-input" id="password-input" type="password" required="required" placeholder="password" autocomplete="new-password">
                         </div>
                     </div>
                     <div class="uk-margin">
                         <label class="uk-form-label" for="password-repeat-input">Re-type Password</label>
                         <div class="uk-form-controls">
-                            <input class="uk-input" id="password-repeat-input" type="password" required="required" placeholder="password">
+                            <input class="uk-input" id="password-repeat-input" type="password" required="required" placeholder="password" autocomplete="new-password">
                         </div>
                     </div>
                     <div class="uk-margin uk-alert uk-alert-danger js-error" style="display:none;">
