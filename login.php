@@ -32,6 +32,8 @@
 				            <input class="uk-input" id="password-input" type="password" required="required" placeholder="password" autocomplete="current-password">
 				        </div>
 				    </div>
+				    <div class="uk-margin uk-alert uk-alert-danger js-error" style="display:none;">
+                    </div>
 				    <div class="uk-margin">
 				        <button class="uk-button uk-button-default" type="submit">Login</button>
 				    </div>

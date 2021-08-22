@@ -5,12 +5,25 @@
 		//ideally, redirect or 404 error
 	}
 
-	//following code only runs if __CONFIG__ is defined ie. from an intended page like index.php
 
 
-	// Include DB.php class
+	// Following code only runs if __CONFIG__ is defined ie. from an intended page like index.php
+	
+	// Sessions on
+	if(!isset($_SESSION)) {
+		session_start();
+	}
+
+	// Allow error reporting
+	/*
+	error_reporting(-1);
+	ini_set('display_errors', 'On');
+	*/
+
+	// Include important classes
 	include_once "classes/DB.php";
+	include_once "classes/Filter.php";
 
-	$db = DB::getConnection();
+	$con = DB::getConnection();
 
 ?>
