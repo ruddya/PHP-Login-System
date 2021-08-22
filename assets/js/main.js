@@ -55,6 +55,10 @@ $(document)
 			console.log(data);
 			if(data.redirect !== undefined) {
 				window.location = data.redirect;
+			} else if(data.error !== undefined) {
+				$error
+					.text(data.error)
+					.show();
 			}
 		})
 		.fail(function ajaxFailed(e){
