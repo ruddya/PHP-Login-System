@@ -3,6 +3,9 @@
 	define('__CONFIG__', true);
 	//require config
 	require_once "inc/config.php"; 
+
+    // Check if user logged in
+    ForceLogin();
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +21,7 @@
     <body>
 
     	<div class="uk-section uk-container">
-
+                <p> Hai hai, dashboard desu. </p>
     	</div>
     	<?php require_once "inc/footer.php"; ?>
     </body>

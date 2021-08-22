@@ -2,7 +2,7 @@
 	//allow the config
 	define('__CONFIG__', true);
 	//require config
-	require_once "inc/config.php"; 
+	require_once "inc/config.php";
 ?>
 <!DOCTYPE html>
 <html>
