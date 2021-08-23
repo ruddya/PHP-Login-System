@@ -57,7 +57,7 @@ $(document)
 				window.location = data.redirect;
 			} else if(data.error !== undefined) {
 				$error
-					.text(data.error)
+					.html(data.error)
 					.show();
 			}
 		})
@@ -126,7 +126,7 @@ $(document)
 		})
 		.done(function ajaxDone(data){
 			// Whatever data is
-			console.log(data);
+			// console.log(data);
 			if(data.redirect !== undefined) {
 				window.location = data.redirect;
 			} else if(data.error !== undefined) {
@@ -145,7 +145,7 @@ $(document)
 		})
 
 
-		console.log(data);
+		// console.log(data);
 
 		function clearErrors(){
 			$("#email-input", $form).css('background-color', '#fff');

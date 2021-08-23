@@ -12,20 +12,18 @@
 
 		$email = Filter::String( $_POST['email'] );
 
-		// Make sure user does not already exist (email must be unique)
-
-		$findUser = $con->prepare("SELECT user_id FROM users WHERE email = LOWER(:email) LIMIT 1");
-		$findUser->bindParam(':email', $email, PDO::PARAM_STR);
-		$findUser->execute();
+		$userFound = User::Find($email,true);
 		
 		// Make sure user can be added and is added
 		
-		if ($findUser->rowCount() == 1){
+		if ($userFound){
 			// User exists
 			// We can also attempt to log them in
-			$return['error'] = "You already have an account";
+			$return['error'] = "You already have an account. <a href='login.php'>Login here.</a>";
+			$return['is_logged_in'] = false;
 		} else {
 			// User does not exist, add them now
+
 			// Hash the password
 			$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
@@ -39,7 +37,6 @@
 			$_SESSION['user_id'] = (int) $user_id;
 
 			// Return the proper information back to JS to redirect user
-
 			$return['redirect'] = '/PHP-Login-System/dashboard.php?message=welcome';
 			$return['is_logged_in'] = true;
 		}

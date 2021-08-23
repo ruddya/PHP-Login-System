@@ -13,20 +13,14 @@
 		$email = Filter::String( $_POST['email'] );
 		$password = $_POST['password'];
 
-		// Make sure user does not already exist (email must be unique)
+		$userFound = User::Find($email,true);
 
-		$findUser = $con->prepare("SELECT user_id, password FROM users WHERE email = LOWER(:email) LIMIT 1");
-		$findUser->bindParam(':email', $email, PDO::PARAM_STR);
-		$findUser->execute();
-		
 		// Make sure user can be added and is added
 		
-		if ($findUser->rowCount() == 1){
+		if ($userFound){
 			// User exists, try and sign them in
-			$User = $findUser->fetch(PDO::FETCH_ASSOC);
-
-			$user_id = (int) $USER['user_id'];
-			$hash = $User['password'];
+			$user_id = (int) $userFound['user_id'];
+			$hash = $userFound['password'];
 
 			if(password_verify($password, $hash)){
 				// User is signed in
